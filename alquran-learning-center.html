@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Learning Center - Pusat Pendidikan Al-Quran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0d8f63ee-cc0d-45d8-b5ee-e97b7ebde9e7.png') center/cover no-repeat;
+            min-height: 70vh;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .active-tab {
+            border-bottom: 3px solid #10B981;
+            color: #10B981;
+            font-weight: 600;
+        }
+        
+        footer {
+            background: linear-gradient(to right, #065f46, #059669);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/635ab7f0-cdf5-4fd2-8746-c590aeef7ee2.png" alt="Logo Quran Learning Center berupa kitab Al-Quran dengan hiasan kaligrafi emas" class="w-12 h-12">
+                <h1 class="text-xl font-bold text-green-700">Quran Learning Center</h1>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#profile" class="text-gray-700 hover:text-green-600">Profile</a>
+                <a href="#program" class="text-gray-700 hover:text-green-600">Program</a>
+                <a href="#artikel" class="text-gray-700 hover:text-green-600">Artikel</a>
+                <a href="#berita" class="text-gray-700 hover:text-green-600">Berita</a>
+                <a href="#jadwal" class="text-gray-700 hover:text-green-600">Jadwal</a>
+                <a href="#narasumber" class="text-gray-700 hover:text-green-600">Narasumber</a>
+                <a href="#kontak" class="text-gray-700 hover:text-green-600">Kontak</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+            <div class="flex flex-col space-y-3 px-4">
+                <a href="#program" class="text-gray-700 hover:text-green-600 py-2">Program</a>
+                <a href="#artikel" class="text-gray-700 hover:text-green-600 py-2">Artikel</a>
+                <a href="#berita" class="text-gray-700 hover:text-green-600 py-2">Berita</a>
+                <a href="#jadwal" class="text-gray-700 hover:text-green-600 py-2">Jadwal</a>
+                <a href="#narasumber" class="text-gray-700 hover:text-green-600 py-2">Narasumber</a>
+                <a href="#kontak" class="text-gray-700 hover:text-green-600 py-2">Kontak</a>
+                <a href="#profile" class="text-gray-700 hover:text-green-600 py-2">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="arabic-text mb-4">وَقَالَ الَّذِينَ كَفَرُوا لَا تَسْمَعُوا لِهَٰذَا الْقُرْآنِ وَالْغَوْا فِيهِ لَعَلَّكُمْ تَغْلِبُونَ</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Quran Learning Center</h1>
+            <p class="text-xl md:text-2xl mb-8">Pusat Pendidikan dan Pengkajian Al-Quran Profesional</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#program" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">Lihat Program</a>
+                <a href="#daftar" class="bg-white hover:bg-gray-100 text-green-700 px-6 py-3 rounded-md font-medium transition duration-300">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Profile Section -->
+    <section id="profile" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Profile Quran Learning Center</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-5">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/484f8e14-1d34-4cd4-8e43-5281cd06fec3.png" alt="Gedung Quran Learning Center dengan arsitektur masjid modern dan taman yang asri" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="md:col-span-7">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Visi & Misi</h3>
+                    <p class="text-gray-600 mb-6">Quran Learning Center didirikan pada tahun 2015 dengan visi menjadi pusat pendidikan Al-Quran terdepan yang mengintegrasikan ilmu tafsir klasik dengan pendekatan kontemporer untuk menjawab tantangan zaman.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600 mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">Visi Kami</h4>
+                                <p class="text-gray-600">"Menjadi pusat pendidikan Al-Quran terkemuka yang mencetak generasi qurani yang menguasai ilmu tafsir dan mampu mengaplikasikannya dalam kehidupan modern."</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600 mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">Misi Kami</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Menyelenggarakan pendidikan tafsir Al-Quran yang komprehensif dan metodologis</li>
+                                    <li>Mengembangkan metode pembelajaran Al-Quran yang relevan dengan kebutuhan zaman</li>
+                                    <li>Mencetak mufassir-mufassir profesional yang berakhlak mulia</li>
+                                    <li>Memasyarakatkan pemahaman Al-Quran yang benar di kalangan umat</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Pencapaian Kami</h3>
+                
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="text-4xl font-bold text-green-600 mb-2">500+</div>
+                        <div class="text-gray-600">Santri Aktif</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="text-4xl font-bold text-green-600 mb-2">50+</div>
+                        <div class="text-gray-600">Program Unggulan</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="text-4xl font-bold text-green-600 mb-2">25+</div>
+                        <div class="text-gray-600">Narasumber Ahli</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="text-4xl font-bold text-green-600 mb-2">8</div>
+                        <div class="text-gray-600">Tahun Berpengalaman</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Program Unggulan Kami</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7e4fc0b5-3ac6-431c-811b-cf5889573699.png" alt="Sekelompok santri sedang belajar tafsir Al-Quran di ruang kelas dengan pencahayaan hangat" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Program Pengkaderan Mufassir</h3>
+                        <p class="text-gray-600 mb-4">Program intensif 2 tahun untuk mencetak mufassir (ahli tafsir) profesional dengan kurikulum terstruktur dan bimbingan ulama kompeten.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">Rp 1.500.000/bulan</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/11a9028f-8ad7-48bc-afae-d7c0e2c90c30.png" alt="Seminar ilmiah dengan pembicara di panggung dan LCD presentasi tentang tema biologi dalam Al-Quran" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Seminar Biologi Quran</h3>
+                        <p class="text-gray-600 mb-4">Eksplorasi hubungan sains dan Al-Quran dengan fokus pada fakta-fakta biologi modern yang sudah disebutkan dalam kitab suci.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">Rp 250.000/sesi</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="program-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/42b3eb3e-58ad-4dbd-9f58-fb2c8443a07a.png" alt="Kegiatan outdoor bersama di alam dengan peserta duduk melingkar mempelajari Al-Quran di bawah pepohonan" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Quranic Camp</h3>
+                        <p class="text-gray-600 mb-4">Program 3 hari 2 malam mengkaji Al-Quran di alam terbuka dengan metode pembelajaran yang menyenangkan dan interaktif.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-medium">Rp 1.200.000/orang</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artikel Pekanan Section -->
+    <section id="artikel" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Artikel Pekanan</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Artikel 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/400d0ca3-29e2-4085-8729-d75ec0ebbb47.png" alt="Ilustrasi tafsir surat Al-Fatihah dengan dekorasi kaligrafi emas di latar belakang" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-gray-500 text-sm">5 Juli 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Keajaiban Tafsir Surat Al-Fatihah</h3>
+                        <p class="text-gray-600 mb-4">Mengupas tafsir mendalam surat pembuka Al-Quran dan relevansinya dengan kehidupan modern saat ini...</p>
+                        <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                            Baca Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Artikel 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9bf7883e-e3dc-4ff4-bb79-936dfdca35eb.png" alt="Ilustrasi sains dalam Al-Quran tentang embriologi dengan diagram perkembangan janin" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-gray-500 text-sm">28 Juni 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Embriologi dalam Perspektif Al-Quran</h3>
+                        <p class="text-gray-600 mb-4">Temukan bagaimana Al-Quran telah menjelaskan tahap perkembangan janin manusia 14 abad yang lalu...</p>
+                        <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                            Baca Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Artikel 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b77e685c-cbf6-4f64-86dd-04fddd32a7ef.png" alt="Gambar suasana Ramadan dengan mushaf Al-Quran dan lampu hias" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-gray-500 text-sm">21 Juni 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Tips Tadarus Produktif di Bulan Ramadan</h3>
+                        <p class="text-gray-600 mb-4">Strategi efektif untuk meningkatkan kuantitas dan kualitas tadarus Al-Quran selama bulan suci...</p>
+                        <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                            Baca Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                    Lihat Semua Artikel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita Acara Section -->
+    <section id="berita" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Berita Acara</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Update terbaru tentang kegiatan dan event Quran Learning Center</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- Berita 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex flex-col md:flex-row gap-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2a712187-18e0-45f2-b71e-936a02e16639.png" alt="Acara wisuda santri Program Mufassir dengan pakaian toga dan peci" class="w-full md:w-48 h-auto object-cover rounded">
+                    <div class="flex-1">
+                        <span class="text-gray-500 text-sm">10 Juni 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Wisuda Angkatan Pertama Program Mufassir</h3>
+                        <p class="text-gray-600 mb-4">Quran Learning Center mewisuda 25 mufassir muda setelah menyelesaikan program intensif selama 2 tahun...</p>
+                        <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                            Baca Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Berita 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex flex-col md:flex-row gap-6">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aca6475e-76f3-48c9-b064-3fba31b2ce86.png" alt="Kegiatan bakti sosial dengan relawan membagikan paket sembako" class="w-full md:w-48 h-auto object-cover rounded">
+                    <div class="flex-1">
+                        <span class="text-gray-500 text-sm">5 Mei 2023</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Bakti Sosial Ramadan 1444 H</h3>
+                        <p class="text-gray-600 mb-4">Quran Learning Center mengadakan bakti sosial dengan membagikan 500 paket sembako untuk masyarakat sekitar...</p>
+                        <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                            Baca Selengkapnya <i class="fas fa-chevron-right ml-1 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block border border-green-600 hover:bg-green-600 hover:text-white text-green-600 px-6 py-3 rounded-md font-medium transition duration-300">
+                    Arsip Berita Lainnya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jadwal Program Section -->
+    <section id="jadwal" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Jadwal Program</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Jadwal lengkap program dan kegiatan Quran Learning Center</p>
+            </div>
+            
+            <div class="overflow-x-auto bg-white rounded-lg shadow-md p-4">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Program</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tanggal</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Waktu</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tempat</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Pendaftaran Program Mufassir</td>
+                            <td class="px-6 py-4 whitespace-nowrap">1 - 31 Juli 2023</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Online 24 jam</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Website</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 text-sm bg-green-100 text-green-800 rounded-full">Berlangsung</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Seminar Biologi Quran</td>
+                            <td class="px-6 py-4 whitespace-nowrap">15 Juli 2023</td>
+                            <td class="px-6 py-4 whitespace-nowrap">09.00 - 12.00 WIB</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Aula Utama</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 rounded-full">Akan Datang</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Quranic Camp Angkatan 2</td>
+                            <td class="px-6 py-4 whitespace-nowrap">28-30 Juli 2023</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Full Day</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Villa Al-Hikmah</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 text-sm bg-blue-100 text-blue-800 rounded-full">Akan Datang</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Kelas Tahsin Dasar</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Setiap Sabtu</td>
+                            <td class="px-6 py-4 whitespace-nowrap">13.00 - 15.00 WIB</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Ruang 1</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 text-sm bg-green-100 text-green-800 rounded-full">Berlangsung</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-8 flex justify-center">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition duration-300 mr-4">
+                    <i class="fas fa-download mr-2"></i> Download Jadwal
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-green-600 border border-green-600 px-6 py-3 rounded-md font-medium transition duration-300">
+                    <i class="far fa-calendar-alt mr-2"></i> Add to Calendar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Narasumber Section -->
+    <section id="narasumber" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Narasumber</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Tim pengajar profesional dan ahli di bidangnya</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Narasumber 1 -->
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9ce82bde-5b1d-45e4-a7a7-06602b8ce41e.png" alt="Foto Profil Ust. Ahmad Zainuddin, M.Ag, pakar tafsir dengan sorban putih dan senyum ramah" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Ust. Ahmad Zainuddin, M.Ag</h3>
+                    <p class="text-gray-600">Pakar Tafsir Al-Quran</p>
+                    <div class="flex justify-center space-x-2 mt-3">
+                        <a href="#" class="text-gray-500 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-blue-800"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Narasumber 2 -->
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7fcdb2dc-ebcb-4888-bf6e-cc26bb72b649.png" alt="Foto Profil Dr. Nurul Hikmah, Lc., M.Hum, perempuan berjilbab dengan kacamata membaca kitab" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Dr. Nurul Hikmah, Lc., M.Hum</h3>
+                    <p class="text-gray-600">Ahli Ulumul Quran</p>
+                    <div class="flex justify-center space-x-2 mt-3">
+                        <a href="#" class="text-gray-500 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-blue-800"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Narasumber 3 -->
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/402b5089-5136-4062-9257-83f25e994c96.png" alt="Foto Profil Prof. Dr. H. Faisal Basri, M.A, pria paruh baya berpeci dengan kacamata bingkai hitam" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Prof. Dr. H. Faisal Basri, M.A</h3>
+                    <p class="text-gray-600">Pakar Tafsir Kontemporer</p>
+                    <div class="flex justify-center space-x-2 mt-3">
+                        <a href="#" class="text-gray-500 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-blue-800"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Narasumber 4 -->
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3f44cf10-586e-4cef-bda7-95d2eddd69d8.png" alt="Foto Profil Dr. Ratna Sari, S.Si., M.Sc, ilmuwan muslimah berjilbab dengan background lab sains" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Dr. Ratna Sari, S.Si., M.Sc</h3>
+                    <p class="text-gray-600">Ahli Sains Quran</p>
+                    <div class="flex justify-center space-x-2 mt-3">
+                        <a href="#" class="text-gray-500 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-blue-800"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+                    Lihat Semua Narasumber
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi Section -->
+    <section id="kontak" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kontak & Lokasi</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Info Kontak -->
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Hubungi Kami</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Alamat</h4>
+                                <p class="text-gray-600">Jl. Pendidikan No. 123, Kel. Ilmu, Kec. Quran, Kota Jakarta Selatan, DKI Jakarta 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600 mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Telepon</h4>
+                                <p class="text-gray-600">(021) 1234567</p>
+                                <p class="text-gray-600">0812-3456-7890 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@quranlearningcenter.id</p>
+                                <p class="text-gray-600">pendaftaran@quranlearningcenter.id</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600 mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Jam Operasional</h4>
+                                <p class="text-gray-600">Senin - Jumat: 08.00 - 17.00 WIB</p>
+                                <p class="text-gray-600">Sabtu: 08.00 - 14.00 WIB</p>
+                                <p class="text-gray-600">Minggu & Hari Libur: Tutup</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mt-10 mb-6">Media Sosial</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-700 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:opacity-90 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-700 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-900 transition duration-300">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Map & Form -->
+                <div class="space-y-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Peta Lokasi</h3>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-md overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a086ac78-cbb1-4134-9a7c-bf5f17aef8e2.png" alt="Peta lokasi Quran Learning Center dengan pin merah menandakan posisi di daerah Jakarta Selatan" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-4">
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center justify-center">
+                                <i class="fas fa-directions mr-2"></i> Dapatkan Petunjuk Arah
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Kirim Pesan</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Nomor Telepon</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md font-medium transition duration-300">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/316bc31d-6aef-41cf-b33e-51c2050048bb.png" alt="Logo kecil Quran Learning Center dengan tulisan arab" class="w-10 h-10 mr-2">
+                        <h3 class="text-xl font-bold">Quran Learning Center</h3>
+                    </div>
+                    <p class="text-green-100 mb-4">Pusat Pendidikan dan Pengkajian Al-Quran Profesional untuk Membentuk Generasi Qurani.</p>
+                    <div class="flex space-x-4">
+    <a href="https://www.facebook.com/yourpage" class="text-green-100 hover:text-white" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com/yourprofile" class="text-green-100 hover:text-white" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/@no__0r677" class="text-green-100 hover:text-white" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/yourchannel" class="text-green-100 hover:text-white" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#program" class="text-green-100 hover:text-white">Program</a></li>
+                        <li><a href="#jadwal" class="text-green-100 hover:text-white">Jadwal</a></li>
+                        <li><a href="#artikel" class="text-green-100 hover:text-white">Artikel</a></li>
+                        <li><a href="#berita" class="text-green-100 hover:text-white">Berita Acara</a></li>
+                        <li><a href="#narasumber" class="text-green-100 hover:text-white">Narasumber</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-green-200"></i>
+                            <span class="text-green-100">Jl. Pendidikan No. 123, Jakarta Selatan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-green-200"></i>
+                            <span class="text-green-100">(021) 1234567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-green-200"></i>
+                            <span class="text-green-100">info@quranlearningcenter.id</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-green-100 mb-4">Dapatkan update terbaru dari Quran Learning Center langsung ke email Anda.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-800">
+                            <button type="submit" class="bg-green-800 hover:bg-green-900 px-4 py-2 rounded-r-md">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-700 mt-8 pt-8 text-center text-green-100">
+                <p>© 2023 Quran Learning Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Active tab indicator for navbar
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let fromTop = window.scrollY;
+            
+            navLinks.forEach(link => {
+                let section = document.querySelector(link.hash);
+                
+                if (
+                    section.offsetTop <= fromTop + 100 &&
+                    section.offsetTop + section.offsetHeight > fromTop + 100
+                ) {
+                    link.classList.add('active-tab');
+                } else {
+                    link.classList.remove('active-tab');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
